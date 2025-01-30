@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styling for the dashboard */
+        .dashboard-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: 20px; /* Aligns the content to the left */
+        }
+
+        .dashboard-container h2 {
+            font-size: 28px;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-container p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .quick-link {
+            background-color: #0078D7;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .quick-link:hover {
+            background-color: #005fa3;
+        }
+
+        #userEmail {
+            max-width: 200px; /* Adjust the width as needed */
+            display: block; /* Ensures the element behaves as a block element */
+            word-wrap: break-word; /* Allows the text to wrap to the next line */
+            cursor: pointer; /* Changes the cursor to indicate interactivity */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <h1>HostelLog - Welcome Dashboard</h1>
+        </div>
+    </header>
+    <div class="sidebar">
+        <input type="hidden" id="studentName" name="studentName">
+        <img src="logoutem.png" alt="UTeM Logo">
+        <h3 id="userName">Loading...</h3>
+        <p id="userEmail">Loading...</p>
+        <a href="dashboardstudent.html" class="active">Dashboard</a>
+        <a href="reportstudent.html">Room Report Issue</a>
+        <a href="checkliststudent.html">Student Room Checklist</a>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <div class="main-content">
+        <div class="dashboard-container">
+            <h2 id="welcomeMessage">Welcome, Loading...</h2>
+            <p>This is your student dashboard. Use the quick links below to navigate through the application or use the sidebar for detailed options.</p>
+           <!-- <div class="quick-links">
+                <a href="dashboardstudent.html" class="quick-link">Dashboard Overview</a>
+                <a href="reportstudent.html" class="quick-link">Report Room Issues</a>
+                <a href="checkliststudent.html" class="quick-link">Room Checklist</a>
+            </div> -->
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Group 4 - Web Development</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

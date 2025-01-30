@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelLog - Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('background1.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header {
+            background-color: #003366;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin: 0;
+            color: #fff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for better readability */
+        }
+
+        .description {
+            flex: 1;
+            max-width: 600px;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .description h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.766); /* Bright white box */
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #003366;
+        }
+
+        .login-box input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            padding: 12px 20px;
+            background-color: #0078D7;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            width: 90%;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-box button:hover {
+            background-color: #005bb5;
+        }
+
+        .login-box a {
+            color: #0078D7;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #003366;
+            text-align: center;
+            padding: 10px 20px;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .description {
+                text-align: center;
+            }
+
+            .login-box {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logoutem.png" alt="UTeM Logo"> <!-- Replace with the actual logo path -->
+        <h1>HostelLog Management System</h1>
+    </header>
+    <main>
+        <div class="description">
+            <h2>Welcome to HostelLog</h2>
+            <p>
+                Our web app enables students to submit reports, cleaners to manage 
+                and update tasks, and admins to efficiently add users, assign tasks, 
+                and track progress, ensuring seamless communication and task management.
+            </p>
+            <p>Contact us on:</p>
+            <p>
+                <strong>Facebook:</strong> satria_utem<br>
+                <strong>Twitter:</strong> satria_utem<br>
+                <strong>Instagram:</strong> satria_utem
+            </p>
+        </div>
+        <div class="login-box">
+            <h2>Sign In</h2>
+            <form action="login.php" method="POST">
+                <input type="email" name="email" id="email" placeholder="Email" required><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br>
+                <a href="#">Forgot Password?</a><br><br>
+                <button type="submit">Continue</button><br><br>
+                <a href="signup.html">Don’t have an account? Sign Up</a>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© Group 4 - Web Development</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="validations.js"></script>
+    <script>
+        document.querySelector('form').addEventListener('submit', validateLoginForm);
+    </script>
+</body>
+</html>
